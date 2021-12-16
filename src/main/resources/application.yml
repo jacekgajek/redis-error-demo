@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: redis
+
+redis:
+  uri: redis://${REDIS_HOST:localhost}:${REDIS_PORT:6379}
+  caches:
+    foo:
+#      key-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+#      value-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+      charset: UTF-8
+      expire-after-write: 1h
+    bar:
+#      key-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+#      value-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+      charset: UTF-8
+      expire-after-write: 1h

@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [ annotation-api, app-name, github-workflow-google-cloud-run-graalvm, graalvm, gradle, http-client, kotest, kotlin, kotlin-application, kotlin-build, logback, management, micronaut-build, netty-server, openapi, readme, rxjava3, rxjava3-http-client, shade, yaml ]
