@@ -11,7 +11,7 @@ redis:
       charset: UTF-8
       expire-after-write: 1h
     bar:
-#      key-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
-#      value-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+      key-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+      value-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
       charset: UTF-8
       expire-after-write: 1h

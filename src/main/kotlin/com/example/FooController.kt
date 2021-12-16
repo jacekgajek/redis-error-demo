@@ -8,8 +8,6 @@ import mu.KotlinLogging
 import java.time.LocalDateTime
 import kotlin.reflect.KClass
 
-fun <T : Any> logger(clazz: KClass<T>?) = KotlinLogging.logger(clazz!!.simpleName!!)
-
 @Controller
 @CacheConfig("foo")
 open class FooController {
@@ -23,21 +21,5 @@ open class FooController {
     open fun foo(): Foo {
         log.info { "Fooooooiing" }
         return Foo(LocalDateTime.now().toString())
-    }
-}
-
-@Controller
-@CacheConfig("bar")
-open class BarController {
-
-    data class Bar(val bar: String)
-
-    private val log = logger(BarController::class)
-
-    @Get(uri = "/bar")
-    @Cacheable
-    open fun foo(): Bar {
-        log.info { "Barring" }
-        return Bar(LocalDateTime.now().toString())
     }
 }
