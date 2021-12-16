@@ -19,14 +19,14 @@ open class BarController {
     @Get(uri = "/bar")
     @Cacheable
     open fun bar2(): Bar {
-        log.info { "Barring" }
+        log.info { "Bar blocking function was called" }
         return Bar(LocalDateTime.now().toString())
     }
 
     @Get(uri = "/bar-suspend")
     @Cacheable
     open suspend fun bar(): Bar {
-        log.info { "Barring sus" }
+        log.info { "Bar suspending function was called" }
         delay(5000)
         return Bar(LocalDateTime.now().toString())
     }

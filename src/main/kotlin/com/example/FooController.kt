@@ -21,13 +21,13 @@ open class FooController {
     @Get(uri = "/foo")
     @Cacheable
     open fun foo2(param: String): Foo {
-        log.info { "Fooooooiing $param" }
+        log.info { "Foo blocking function was called with parameter $param" }
         return Foo(param + ": " + LocalDateTime.now().toString())
     }
     @Get(uri = "/foo-suspend")
     @Cacheable
     open suspend fun foo(param: String): Foo {
-        log.info { "Fooooooiing sus $param" }
+        log.info { "Foo suspending function was called with parameter $param" }
         delay(5000)
         return Foo(param + ": " + LocalDateTime.now().toString())
     }

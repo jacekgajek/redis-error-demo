@@ -1,7 +1,7 @@
 ###
-GET http://localhost:8080/foo2?param=1
+GET http://localhost:8080/foo?param=1
 ###
-GET http://localhost:8080/foo2?param=2
+GET http://localhost:8080/foo?param=2
 ###
 GET http://localhost:8080/foo-suspend?param=1
 ###
